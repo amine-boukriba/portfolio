@@ -311,12 +311,12 @@
 
         .services-layout {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 4rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
         }
 
         .service-box {
-            padding: 4rem;
+            padding: 3.5rem;
             border: 3px solid var(--accent);
             position: relative;
             transition: all 0.3s;
@@ -342,22 +342,29 @@
 
         .service-box h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
             font-weight: 900;
+        }
+
+        .service-box > p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            opacity: 0.9;
         }
 
         .service-list {
             list-style: none;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
         }
 
         .service-list li {
-            padding: 1rem 0;
+            padding: 0.85rem 0;
             padding-left: 2rem;
             position: relative;
             opacity: 0.85;
             line-height: 1.7;
+            font-size: 0.95rem;
         }
 
         .service-list li::before {
@@ -516,6 +523,12 @@
         }
 
         /* Responsive */
+        @media (max-width: 1400px) {
+            .services-layout {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 1200px) {
             .section-grid {
                 grid-template-columns: 1fr;
@@ -526,12 +539,14 @@
                 position: static;
             }
 
-            .services-layout {
-                grid-template-columns: 1fr;
-            }
-
             .approach-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .services-layout {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -658,6 +673,7 @@
                 <h2>Ma méthode : <span>Simple & Progressive</span></h2>
             </div>
             <div class="services-layout">
+                <!-- Phase 01 -->
                 <div class="service-box">
                     <div class="service-tag">Phase 01</div>
                     <h3>Diagnostic</h3>
@@ -673,6 +689,8 @@
                         Rapport de synthèse avec recommandations actionnables et plan d'action clair.
                     </div>
                 </div>
+
+                <!-- Phase 02 -->
                 <div class="service-box">
                     <div class="service-tag">Phase 02</div>
                     <h3>Implémentation</h3>
@@ -687,6 +705,24 @@
                     <div class="deliverable">
                         <strong>Approche</strong>
                         Pragmatique et sans sur-complexité. Je ne propose que ce qui apporte de la valeur réelle.
+                    </div>
+                </div>
+
+                <!-- Phase 03 -->
+                <div class="service-box">
+                    <div class="service-tag">Phase 03</div>
+                    <h3>Suivi & Optimisation</h3>
+                    <p>Un accompagnement continu pour garantir que vos outils restent performants, adoptés et alignés avec l'évolution de votre business.</p>
+                    <ul class="service-list">
+                        <li>Monitoring des KPIs et ajustement des dashboards</li>
+                        <li>Formation continue et support aux équipes</li>
+                        <li>Optimisation des automatisations existantes</li>
+                        <li>Analyses ponctuelles pour décisions stratégiques</li>
+                        <li>Évolution des solutions selon vos nouveaux besoins</li>
+                    </ul>
+                    <div class="deliverable">
+                        <strong>Format</strong>
+                        Accompagnement flexible (mensuel, trimestriel) adapté à votre rythme et vos enjeux.
                     </div>
                 </div>
             </div>
