@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Amine Boukriba | Digital & Data</title>
+    <title>Mohamed Amine Boukriba | Digital, Data & IA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -37,9 +37,11 @@
             z-index: 1000;
             display: flex;
             gap: 3rem;
+            align-items: center;
         }
 
-        nav a {
+        nav a,
+        nav button {
             color: var(--text);
             text-decoration: none;
             font-size: 0.875rem;
@@ -50,7 +52,16 @@
             position: relative;
         }
 
-        nav a::before {
+        nav button {
+            background: none;
+            border: none;
+            font-family: inherit;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        nav a::before,
+        nav button::before {
             content: '';
             position: absolute;
             bottom: -5px;
@@ -61,7 +72,8 @@
             transition: width 0.3s;
         }
 
-        nav a:hover::before {
+        nav a:hover::before,
+        nav button:hover::before {
             width: 100%;
         }
 
@@ -582,20 +594,21 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <a href="#services">Services</a>
-        <a href="#approche">Approche</a>
-        <a href="#contact">Contact</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#approche" data-i18n="nav.approach">Approche</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <button type="button" id="lang-toggle" aria-label="Switch language"></button>
     </nav>
 
     <!-- Hero -->
     <section class="hero">
         <div class="hero-number">01</div>
         <div class="hero-content">
-            <div class="hero-label">Expert Digital & Data</div>
-            <h1>Transformez vos données en décisions</h1>
-            <p class="hero-subtitle">J'aide les TPE/PME à structurer leurs processus, fiabiliser leurs données et automatiser l'essentiel.</p>
+            <div class="hero-label" data-i18n="hero.label">Expert Digital, Data &amp; IA</div>
+            <h1 data-i18n="hero.title">Transformez vos données en décisions</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">J'aide les entreprises à structurer leurs données, automatiser les tâches répétitives et mettre l'IA au service de leurs décisions.</p>
             <a href="#contact" class="hero-cta">
-                <span>Parlons de votre projet</span>
+                <span data-i18n="hero.cta">Parlons de votre projet</span>
                 <span>→</span>
             </a>
         </div>
@@ -604,23 +617,23 @@
     <!-- Target Section -->
     <section class="target-section">
         <div class="section-grid">
-            <h2 class="section-title">Pour qui ?</h2>
+            <h2 class="section-title" data-i18n="target.title">Pour qui ?</h2>
             <div class="content-blocks">
                 <div class="content-block">
-                    <h3>Vous utilisez trop d'Excel</h3>
-                    <p>Vos données sont dispersées dans des fichiers multiples, non connectés, difficiles à consolider et à jour.</p>
+                    <h3 data-i18n="target.block1.title">Vous utilisez trop d'Excel</h3>
+                    <p data-i18n="target.block1.text">Vos données sont éparpillées dans des fichiers multiples, non connectés, difficiles à tenir à jour.</p>
                 </div>
                 <div class="content-block">
-                    <h3>Vous manquez de visibilité</h3>
-                    <p>Vous n'avez pas une vue claire de vos chiffres clés et perdez du temps à chercher l'information.</p>
+                    <h3 data-i18n="target.block2.title">Vous manquez de visibilité</h3>
+                    <p data-i18n="target.block2.text">Vous n'avez pas une vue claire de vos chiffres clés et perdez du temps à chercher l'information.</p>
                 </div>
                 <div class="content-block">
-                    <h3>Vous faites trop de manuel</h3>
-                    <p>Trop de tâches répétitives qui prennent du temps à vos équipes alors qu'elles pourraient être automatisées.</p>
+                    <h3 data-i18n="target.block3.title">Vous faites trop de manuel</h3>
+                    <p data-i18n="target.block3.text">Des tâches répétitives mobilisent vos équipes alors qu'elles pourraient être automatisées, avec ou sans IA.</p>
                 </div>
                 <div class="content-block">
-                    <h3>Vous décidez sans données</h3>
-                    <p>Vos décisions stratégiques reposent sur l'intuition plutôt que sur des données fiables et structurées.</p>
+                    <h3 data-i18n="target.block4.title">Vous décidez sans données</h3>
+                    <p data-i18n="target.block4.text">Vos décisions stratégiques reposent sur l'intuition plutôt que sur des données fiables et structurées.</p>
                 </div>
             </div>
         </div>
@@ -630,36 +643,36 @@
     <section class="problems-section">
         <div class="problems-wrapper">
             <div class="problems-header">
-                <h2>Le problème que je résous</h2>
-                <p>Quand une TPE/PME grandit, ses outils ne suivent pas toujours. Résultat : inefficacité, erreurs, perte de temps.</p>
+                <h2 data-i18n="problems.title">Le problème que je résous</h2>
+                <p data-i18n="problems.subtitle">Quand une entreprise grandit, ses outils ne suivent pas toujours. Résultat : inefficacité, erreurs, temps perdu.</p>
             </div>
             <div class="problems-grid">
                 <div class="problem-item">
                     <div class="problem-content">
                         <div class="problem-number">01</div>
-                        <h3>Processus inefficaces</h3>
-                        <p>Des tâches répétitives qui consument votre temps et celui de vos équipes, ralentissant la croissance.</p>
+                        <h3 data-i18n="problems.item1.title">Processus inefficaces</h3>
+                        <p data-i18n="problems.item1.text">Des tâches répétitives qui consomment votre temps et celui de vos équipes, et ralentissent la croissance.</p>
                     </div>
                 </div>
                 <div class="problem-item">
                     <div class="problem-content">
                         <div class="problem-number">02</div>
-                        <h3>Données non fiables</h3>
-                        <p>Des informations éparpillées, contradictoires, impossibles à exploiter pour prendre de bonnes décisions.</p>
+                        <h3 data-i18n="problems.item2.title">Données non fiables</h3>
+                        <p data-i18n="problems.item2.text">Des informations éparpillées, contradictoires, impossibles à exploiter pour bien décider.</p>
                     </div>
                 </div>
                 <div class="problem-item">
                     <div class="problem-content">
                         <div class="problem-number">03</div>
-                        <h3>Pas de pilotage</h3>
-                        <p>Sans indicateurs clairs et accessibles, impossible de mesurer la performance et d'ajuster la stratégie.</p>
+                        <h3 data-i18n="problems.item3.title">Pas de pilotage</h3>
+                        <p data-i18n="problems.item3.text">Sans indicateurs clairs et accessibles, impossible de mesurer la performance et d'ajuster le cap.</p>
                     </div>
                 </div>
                 <div class="problem-item">
                     <div class="problem-content">
                         <div class="problem-number">04</div>
-                        <h3>Décisions hasardeuses</h3>
-                        <p>Sans fondations data solides, chaque décision stratégique devient un pari risqué.</p>
+                        <h3 data-i18n="problems.item4.title">Décisions hasardeuses</h3>
+                        <p data-i18n="problems.item4.text">Sans fondations data solides, chaque décision stratégique devient un pari.</p>
                     </div>
                 </div>
             </div>
@@ -670,59 +683,59 @@
     <section id="services" class="services-section">
         <div class="services-wrapper">
             <div class="services-intro">
-                <h2>Ma méthode : <span>Simple & Progressive</span></h2>
+                <h2 id="services-title"><span data-i18n="services.titlePrefix">Ma méthode : </span><span data-i18n="services.titleHighlight">Simple & Progressive</span></h2>
             </div>
             <div class="services-layout">
                 <!-- Phase 01 -->
                 <div class="service-box">
-                    <div class="service-tag">Phase 01</div>
-                    <h3>Diagnostic</h3>
-                    <p>Une analyse rapide et ciblée de votre situation actuelle pour identifier les leviers d'amélioration prioritaires.</p>
+                    <div class="service-tag" data-i18n="services.phase1.tag">Phase 01</div>
+                    <h3 data-i18n="services.phase1.h3">Diagnostic</h3>
+                    <p data-i18n="services.phase1.p">Une analyse rapide et ciblée de votre situation actuelle pour identifier les leviers d'amélioration prioritaires.</p>
                     <ul class="service-list">
-                        <li>Audit de vos outils et sources de données</li>
-                        <li>Identification des KPIs stratégiques</li>
-                        <li>Repérage des frictions opérationnelles</li>
-                        <li>Roadmap d'actions priorisées</li>
+                        <li data-i18n="services.phase1.li1">Audit de vos outils et sources de données</li>
+                        <li data-i18n="services.phase1.li2">Identification des indicateurs clés (KPIs)</li>
+                        <li data-i18n="services.phase1.li3">Repérage des tâches à automatiser ou fiabiliser</li>
+                        <li data-i18n="services.phase1.li4">Feuille de route d'actions priorisées</li>
                     </ul>
                     <div class="deliverable">
-                        <strong>Livrable</strong>
-                        Rapport de synthèse avec recommandations actionnables et plan d'action clair.
+                        <strong data-i18n="services.phase1.deliverableLabel">Livrable</strong>
+                        <span data-i18n="services.phase1.deliverableText">Rapport de synthèse avec recommandations actionnables et plan d'action clair.</span>
                     </div>
                 </div>
 
                 <!-- Phase 02 -->
                 <div class="service-box">
-                    <div class="service-tag">Phase 02</div>
-                    <h3>Implémentation</h3>
-                    <p>Mise en œuvre concrète des solutions identifiées, adaptées à vos priorités et contraintes réelles.</p>
+                    <div class="service-tag" data-i18n="services.phase2.tag">Phase 02</div>
+                    <h3 data-i18n="services.phase2.h3">Implémentation</h3>
+                    <p data-i18n="services.phase2.p">Mise en œuvre concrète des solutions identifiées, adaptées à vos priorités et contraintes réelles.</p>
                     <ul class="service-list">
-                        <li>Déploiement d'outils digitaux adaptés</li>
-                        <li>Structuration et consolidation des données</li>
-                        <li>Création de dashboards et reporting</li>
-                        <li>Automatisation des processus répétitifs</li>
-                        <li>Analyses prédictives si pertinent</li>
+                        <li data-i18n="services.phase2.li1">Déploiement d'outils digitaux adaptés</li>
+                        <li data-i18n="services.phase2.li2">Structuration et consolidation de vos données</li>
+                        <li data-i18n="services.phase2.li3">Création de tableaux de bord et rapports clairs</li>
+                        <li data-i18n="services.phase2.li4">Automatisation intelligente des tâches répétitives, grâce à l'IA quand c'est pertinent</li>
+                        <li data-i18n="services.phase2.li5">Assistants et analyses prédictives pour anticiper plutôt que subir</li>
                     </ul>
                     <div class="deliverable">
-                        <strong>Approche</strong>
-                        Pragmatique et sans sur-complexité. Je ne propose que ce qui apporte de la valeur réelle.
+                        <strong data-i18n="services.phase2.deliverableLabel">Approche</strong>
+                        <span data-i18n="services.phase2.deliverableText">Pragmatique et sans sur-complexité. Je ne propose que ce qui apporte une valeur réelle.</span>
                     </div>
                 </div>
 
                 <!-- Phase 03 -->
                 <div class="service-box">
-                    <div class="service-tag">Phase 03</div>
-                    <h3>Suivi Continu</h3>
-                    <p>Un accompagnement continu pour garantir que vos outils restent performants, adoptés et alignés avec l'évolution de votre business.</p>
+                    <div class="service-tag" data-i18n="services.phase3.tag">Phase 03</div>
+                    <h3 data-i18n="services.phase3.h3">Suivi Continu</h3>
+                    <p data-i18n="services.phase3.p">Un accompagnement continu pour garantir que vos outils restent performants, adoptés et alignés avec l'évolution de votre activité.</p>
                     <ul class="service-list">
-                        <li>Monitoring des KPIs et ajustement des dashboards</li>
-                        <li>Formation continue et support aux équipes</li>
-                        <li>Optimisation des automatisations existantes</li>
-                        <li>Analyses ponctuelles pour décisions stratégiques</li>
-                        <li>Évolution des solutions selon vos nouveaux besoins</li>
+                        <li data-i18n="services.phase3.li1">Suivi des indicateurs et ajustement des tableaux de bord</li>
+                        <li data-i18n="services.phase3.li2">Formation continue et support aux équipes</li>
+                        <li data-i18n="services.phase3.li3">Optimisation des automatisations existantes</li>
+                        <li data-i18n="services.phase3.li4">Analyses ponctuelles pour vos décisions stratégiques</li>
+                        <li data-i18n="services.phase3.li5">Évolution des solutions selon vos nouveaux besoins</li>
                     </ul>
                     <div class="deliverable">
-                        <strong>Format</strong>
-                        Accompagnement flexible (mensuel, trimestriel) adapté à votre rythme et vos enjeux.
+                        <strong data-i18n="services.phase3.deliverableLabel">Format</strong>
+                        <span data-i18n="services.phase3.deliverableText">Accompagnement flexible (mensuel, trimestriel) adapté à votre rythme et vos enjeux.</span>
                     </div>
                 </div>
             </div>
@@ -732,23 +745,23 @@
     <!-- Approach Section -->
     <section id="approche" class="approach-section">
         <div class="approach-wrapper">
-            <h2>Comment je travaille ?</h2>
+            <h2 data-i18n="approach.title">Comment je travaille ?</h2>
             <div class="approach-grid">
                 <div class="approach-card">
-                    <h3>Missions cadrées</h3>
-                    <p>Objectifs clairs, périmètre défini, livrables précis. Chaque mission est indépendante.</p>
+                    <h3 data-i18n="approach.card1.h3">Missions cadrées</h3>
+                    <p data-i18n="approach.card1.p">Objectifs clairs, périmètre défini, livrables précis. Chaque mission est indépendante.</p>
                 </div>
                 <div class="approach-card">
-                    <h3>Communication simple</h3>
-                    <p>Pas de jargon technique. J'explique tout en termes clairs et accessibles.</p>
+                    <h3 data-i18n="approach.card2.h3">Communication simple</h3>
+                    <p data-i18n="approach.card2.p">Pas de jargon technique. J'explique tout en termes clairs et accessibles.</p>
                 </div>
                 <div class="approach-card">
-                    <h3>Transparence totale</h3>
-                    <p>Échanges réguliers, visibilité complète sur l'avancement et les décisions.</p>
+                    <h3 data-i18n="approach.card3.h3">Transparence totale</h3>
+                    <p data-i18n="approach.card3.p">Échanges réguliers, visibilité complète sur l'avancement et les décisions.</p>
                 </div>
                 <div class="approach-card">
-                    <h3>Résultats concrets</h3>
-                    <p>Focus sur l'impact mesurable et la valeur ajoutée réelle pour votre business.</p>
+                    <h3 data-i18n="approach.card4.h3">Résultats concrets</h3>
+                    <p data-i18n="approach.card4.p">Une expérience terrain en data et en IA, au service d'un impact mesurable pour votre activité.</p>
                 </div>
             </div>
         </div>
@@ -757,8 +770,8 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="contact-wrapper">
-            <h2>Prêt à structurer vos données ?</h2>
-            <p class="contact-subtitle">Commençons par un échange sans engagement pour comprendre vos enjeux.</p>
+            <h2 data-i18n="contact.title">Prêt à structurer vos données ?</h2>
+            <p class="contact-subtitle" data-i18n="contact.subtitle">Commençons par un échange sans engagement pour comprendre vos enjeux.</p>
             <div class="contact-details">
                 <div class="contact-item">
                     <strong>Mohamed Amine Boukriba</strong>
@@ -771,7 +784,7 @@
                 </div>
             </div>
             <a href="https://www.linkedin.com/in/mohamed-amine-boukriba-16052017a/" target="_blank" class="contact-cta">
-                <span>Démarrer la conversation</span>
+                <span data-i18n="contact.cta">Démarrer la conversation</span>
                 <span>→</span>
             </a>
         </div>
@@ -779,10 +792,199 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Mohamed Amine Boukriba - Tous droits réservés</p>
+        <p>&copy; 2026 Mohamed Amine Boukriba - <span data-i18n="footer.rights">Tous droits réservés</span></p>
     </footer>
 
     <script>
+        // Translations (FR default, EN via ?lang=en or the nav toggle)
+        const translations = {
+            fr: {
+                meta: { title: "Mohamed Amine Boukriba | Digital, Data & IA" },
+                nav: { services: "Services", approach: "Approche", contact: "Contact" },
+                hero: {
+                    label: "Expert Digital, Data &amp; IA",
+                    title: "Transformez vos données en décisions",
+                    subtitle: "J'aide les entreprises à structurer leurs données, automatiser les tâches répétitives et mettre l'IA au service de leurs décisions.",
+                    cta: "Parlons de votre projet"
+                },
+                target: {
+                    title: "Pour qui ?",
+                    block1: { title: "Vous utilisez trop d'Excel", text: "Vos données sont éparpillées dans des fichiers multiples, non connectés, difficiles à tenir à jour." },
+                    block2: { title: "Vous manquez de visibilité", text: "Vous n'avez pas une vue claire de vos chiffres clés et perdez du temps à chercher l'information." },
+                    block3: { title: "Vous faites trop de manuel", text: "Des tâches répétitives mobilisent vos équipes alors qu'elles pourraient être automatisées, avec ou sans IA." },
+                    block4: { title: "Vous décidez sans données", text: "Vos décisions stratégiques reposent sur l'intuition plutôt que sur des données fiables et structurées." }
+                },
+                problems: {
+                    title: "Le problème que je résous",
+                    subtitle: "Quand une entreprise grandit, ses outils ne suivent pas toujours. Résultat : inefficacité, erreurs, temps perdu.",
+                    item1: { title: "Processus inefficaces", text: "Des tâches répétitives qui consomment votre temps et celui de vos équipes, et ralentissent la croissance." },
+                    item2: { title: "Données non fiables", text: "Des informations éparpillées, contradictoires, impossibles à exploiter pour bien décider." },
+                    item3: { title: "Pas de pilotage", text: "Sans indicateurs clairs et accessibles, impossible de mesurer la performance et d'ajuster le cap." },
+                    item4: { title: "Décisions hasardeuses", text: "Sans fondations data solides, chaque décision stratégique devient un pari." }
+                },
+                services: {
+                    titlePrefix: "Ma méthode : ",
+                    titleHighlight: "Simple & Progressive",
+                    phase1: {
+                        tag: "Phase 01", h3: "Diagnostic",
+                        p: "Une analyse rapide et ciblée de votre situation actuelle pour identifier les leviers d'amélioration prioritaires.",
+                        li1: "Audit de vos outils et sources de données",
+                        li2: "Identification des indicateurs clés (KPIs)",
+                        li3: "Repérage des tâches à automatiser ou fiabiliser",
+                        li4: "Feuille de route d'actions priorisées",
+                        deliverableLabel: "Livrable",
+                        deliverableText: "Rapport de synthèse avec recommandations actionnables et plan d'action clair."
+                    },
+                    phase2: {
+                        tag: "Phase 02", h3: "Implémentation",
+                        p: "Mise en œuvre concrète des solutions identifiées, adaptées à vos priorités et contraintes réelles.",
+                        li1: "Déploiement d'outils digitaux adaptés",
+                        li2: "Structuration et consolidation de vos données",
+                        li3: "Création de tableaux de bord et rapports clairs",
+                        li4: "Automatisation intelligente des tâches répétitives, grâce à l'IA quand c'est pertinent",
+                        li5: "Assistants et analyses prédictives pour anticiper plutôt que subir",
+                        deliverableLabel: "Approche",
+                        deliverableText: "Pragmatique et sans sur-complexité. Je ne propose que ce qui apporte une valeur réelle."
+                    },
+                    phase3: {
+                        tag: "Phase 03", h3: "Suivi Continu",
+                        p: "Un accompagnement continu pour garantir que vos outils restent performants, adoptés et alignés avec l'évolution de votre activité.",
+                        li1: "Suivi des indicateurs et ajustement des tableaux de bord",
+                        li2: "Formation continue et support aux équipes",
+                        li3: "Optimisation des automatisations existantes",
+                        li4: "Analyses ponctuelles pour vos décisions stratégiques",
+                        li5: "Évolution des solutions selon vos nouveaux besoins",
+                        deliverableLabel: "Format",
+                        deliverableText: "Accompagnement flexible (mensuel, trimestriel) adapté à votre rythme et vos enjeux."
+                    }
+                },
+                approach: {
+                    title: "Comment je travaille ?",
+                    card1: { h3: "Missions cadrées", p: "Objectifs clairs, périmètre défini, livrables précis. Chaque mission est indépendante." },
+                    card2: { h3: "Communication simple", p: "Pas de jargon technique. J'explique tout en termes clairs et accessibles." },
+                    card3: { h3: "Transparence totale", p: "Échanges réguliers, visibilité complète sur l'avancement et les décisions." },
+                    card4: { h3: "Résultats concrets", p: "Une expérience terrain en data et en IA, au service d'un impact mesurable pour votre activité." }
+                },
+                contact: {
+                    title: "Prêt à structurer vos données ?",
+                    subtitle: "Commençons par un échange sans engagement pour comprendre vos enjeux.",
+                    cta: "Démarrer la conversation"
+                },
+                footer: { rights: "Tous droits réservés" }
+            },
+            en: {
+                meta: { title: "Mohamed Amine Boukriba | Digital, Data & AI" },
+                nav: { services: "Services", approach: "Approach", contact: "Contact" },
+                hero: {
+                    label: "Digital, Data &amp; AI Expert",
+                    title: "Turn your data into decisions",
+                    subtitle: "I help businesses organize their data, automate repetitive work, and put AI to use.",
+                    cta: "Let's talk about your project"
+                },
+                target: {
+                    title: "Who this is for",
+                    block1: { title: "You're drowning in spreadsheets", text: "Your data lives in disconnected files that are hard to keep accurate and up to date." },
+                    block2: { title: "You lack visibility", text: "You don't have a clear view of your key numbers, and finding answers takes too long." },
+                    block3: { title: "Too much manual work", text: "Repetitive tasks eat up your team's time when they could be automated, with or without AI." },
+                    block4: { title: "You're deciding without data", text: "Big calls get made on gut feeling instead of solid, structured information." }
+                },
+                problems: {
+                    title: "The problem I solve",
+                    subtitle: "As a business grows, its tools often don't keep up. The result: inefficiency, mistakes, wasted time.",
+                    item1: { title: "Inefficient processes", text: "Repetitive tasks eat up time your team could spend on higher-value work, slowing growth." },
+                    item2: { title: "Unreliable data", text: "Scattered, conflicting information that's impossible to use for good decisions." },
+                    item3: { title: "No real oversight", text: "Without clear, accessible metrics, you can't measure performance or course-correct." },
+                    item4: { title: "Risky decisions", text: "Without solid data foundations, every strategic call becomes a gamble." }
+                },
+                services: {
+                    titlePrefix: "My method: ",
+                    titleHighlight: "Simple & Progressive",
+                    phase1: {
+                        tag: "Phase 01", h3: "Diagnosis",
+                        p: "A fast, focused look at where things stand today, to find the highest-impact improvements first.",
+                        li1: "Audit of your tools and data sources",
+                        li2: "Identifying the metrics that actually matter",
+                        li3: "Spotting what should be automated or made reliable",
+                        li4: "A prioritized action roadmap",
+                        deliverableLabel: "Deliverable",
+                        deliverableText: "A summary report with clear, actionable recommendations and a plan of action."
+                    },
+                    phase2: {
+                        tag: "Phase 02", h3: "Implementation",
+                        p: "Turning the plan into reality, adapted to your real priorities and constraints.",
+                        li1: "Rolling out the right digital tools",
+                        li2: "Structuring and consolidating your data",
+                        li3: "Building clear dashboards and reports",
+                        li4: "Smart automation of repetitive tasks, using AI where it earns its place",
+                        li5: "Predictive insight and AI assistants to help you get ahead of problems, not just react",
+                        deliverableLabel: "Approach",
+                        deliverableText: "Practical, never over-engineered. I only propose what delivers real value."
+                    },
+                    phase3: {
+                        tag: "Phase 03", h3: "Ongoing Support",
+                        p: "Continued support to keep your tools effective, adopted, and aligned as your business evolves.",
+                        li1: "Tracking metrics and refining dashboards",
+                        li2: "Ongoing training and support for your team",
+                        li3: "Improving existing automations",
+                        li4: "One-off analysis for key strategic decisions",
+                        li5: "Evolving the solution as your needs change",
+                        deliverableLabel: "Format",
+                        deliverableText: "Flexible support (monthly or quarterly), matched to your pace and priorities."
+                    }
+                },
+                approach: {
+                    title: "How I work",
+                    card1: { h3: "Well-scoped engagements", p: "Clear goals, defined scope, precise deliverables. Every engagement stands on its own." },
+                    card2: { h3: "Plain communication", p: "No technical jargon. I explain everything in clear, accessible terms." },
+                    card3: { h3: "Full transparency", p: "Regular check-ins, complete visibility into progress and decisions." },
+                    card4: { h3: "Real results", p: "Hands-on experience in data and AI, focused on measurable impact for your business." }
+                },
+                contact: {
+                    title: "Ready to get your data in order?",
+                    subtitle: "Let's start with a no-commitment conversation about what you're dealing with.",
+                    cta: "Start the conversation"
+                },
+                footer: { rights: "All rights reserved" }
+            }
+        };
+
+        function getByPath(obj, path) {
+            return path.split('.').reduce((o, k) => (o ? o[k] : undefined), obj);
+        }
+
+        function applyLanguage(lang) {
+            if (lang !== 'en' && lang !== 'fr') lang = 'fr';
+            document.documentElement.lang = lang;
+            document.title = translations[lang].meta.title;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const value = getByPath(translations[lang], el.getAttribute('data-i18n'));
+                if (value !== undefined) el.innerHTML = value;
+            });
+
+            const toggle = document.getElementById('lang-toggle');
+            if (toggle) toggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+
+            window.currentLang = lang;
+        }
+
+        function setLanguage(lang) {
+            applyLanguage(lang);
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', lang);
+            history.replaceState(null, '', url);
+        }
+
+        const initialLang = new URLSearchParams(window.location.search).get('lang') === 'en' ? 'en' : 'fr';
+        applyLanguage(initialLang);
+
+        const langToggle = document.getElementById('lang-toggle');
+        if (langToggle) {
+            langToggle.addEventListener('click', () => {
+                setLanguage(window.currentLang === 'fr' ? 'en' : 'fr');
+            });
+        }
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
